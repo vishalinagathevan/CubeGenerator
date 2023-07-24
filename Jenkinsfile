@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/vishalinagathevan/CubeGenerator.git'
+                git branch: 'main', url: 'https://jenkinsPAT@github.com/vishalinagathevan/CubeGenerator.git'
 
                 // Run Maven on a Unix agent.
                 //sh "mvn -Dmaven.test.failure.ignore=true clean package"
